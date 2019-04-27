@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://kylechandev.github.io">
-  <title>Archives | 凯</title>
+  <title>Glide 4.9.0的使用（Kotlin） | 凯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="KYLE">
-<meta property="og:type" content="website">
-<meta property="og:title" content="凯">
-<meta property="og:url" content="https://kylechandev.github.io/archives/index.html">
+  <meta name="description" content="注：此文为转载，原文地址：https://blog.csdn.net/AlpinistWang/article/details/87714637 一、简介Glide是Google推出的加载图片的框架，支持静态图、动态图、网络图片、本地图片、资源文件等等图片的加载，非常强大。 Github地址：https://github.com/bumptech/glide官方文档：http://bumptech">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Glide 4.9.0的使用（Kotlin）">
+<meta property="og:url" content="https://kylechandev.github.io/2019/04/27/glide/index.html">
 <meta property="og:site_name" content="凯">
+<meta property="og:description" content="注：此文为转载，原文地址：https://blog.csdn.net/AlpinistWang/article/details/87714637 一、简介Glide是Google推出的加载图片的框架，支持静态图、动态图、网络图片、本地图片、资源文件等等图片的加载，非常强大。 Github地址：https://github.com/bumptech/glide官方文档：http://bumptech">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-27T09:53:39.810Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="凯">
+<meta name="twitter:title" content="Glide 4.9.0的使用（Kotlin）">
+<meta name="twitter:description" content="注：此文为转载，原文地址：https://blog.csdn.net/AlpinistWang/article/details/87714637 一、简介Glide是Google推出的加载图片的框架，支持静态图、动态图、网络图片、本地图片、资源文件等等图片的加载，非常强大。 Github地址：https://github.com/bumptech/glide官方文档：http://bumptech">
   
     <link rel="alternative" href="/atom.xml" title="凯" type="application/atom+xml">
   
@@ -163,36 +167,110 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-glide" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Glide 4.9.0的使用（Kotlin）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/27/glide/" class="archive-article-date">
+
+        
+        <a href="/2019/04/27/glide/" class="archive-article-date">
   	<time datetime="2019-04-27T09:52:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-27</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/27/glide/">Glide 4.9.0的使用（Kotlin）</a>
-    </h1>
-  
+        
+        
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">1.3k字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">6分</span>
+      </span>
+    </span>
+</div>
           
+          
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注：此文为转载，原文地址：<a href="https://blog.csdn.net/AlpinistWang/article/details/87714637" target="_blank" rel="noopener">https://blog.csdn.net/AlpinistWang/article/details/87714637</a></p>
+<h3 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h3><p>Glide是Google推出的加载图片的框架，支持静态图、动态图、网络图片、本地图片、资源文件等等图片的加载，非常强大。</p>
+<p>Github地址：<a href="https://github.com/bumptech/glide" target="_blank" rel="noopener">https://github.com/bumptech/glide</a><br>官方文档：<a href="http://bumptech.github.io/glide/" target="_blank" rel="noopener">http://bumptech.github.io/glide/</a><br>官方文档中文版：<a href="https://muyangmin.github.io/glide-docs-cn/" target="_blank" rel="noopener">https://muyangmin.github.io/glide-docs-cn/</a><br><a id="more"></a></p>
+<h3 id="二、下载和设置"><a href="#二、下载和设置" class="headerlink" title="二、下载和设置"></a>二、下载和设置</h3><p>1.导入Glide库和Glide编译库<br>build.gradle中，导入库：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: &apos;kotlin-kapt&apos;</span><br><span class="line"></span><br><span class="line">android&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">	...</span><br><span class="line">	implementation &apos;com.github.bumptech.glide:glide:4.9.0&apos;</span><br><span class="line">	kapt &apos;com.github.bumptech.glide:compiler:4.9.0&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.添加权限<br>AndroidManifest中，添加权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; /&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>3.Proguard混淆<br>proguard-rules.pro中添加以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-keep public class * implements com.bumptech.glide.module.GlideModule</span><br><span class="line">-keep public class * extends com.bumptech.glide.module.AppGlideModule</span><br><span class="line">-keep public enum com.bumptech.glide.load.ImageHeaderParser$** &#123;</span><br><span class="line">  **[] $VALUES;</span><br><span class="line">  public *;</span><br><span class="line">&#125;</span><br><span class="line">-dontwarn com.bumptech.glide.load.resource.bitmap.VideoDecoder</span><br></pre></td></tr></table></figure></p>
+<h3 id="三、Generated-API"><a href="#三、Generated-API" class="headerlink" title="三、Generated API"></a>三、Generated API</h3><p>1.创建MyAppGlideModule<br>1.1作用<br>创建AppGlideModule的目的是：</p>
+<blockquote>
+<p>(1) 全局配置Glide选项<br>(2) 注册自定义组件</p>
+</blockquote>
+<p>注：在Glide4的4.9.0版本以前，创建了MyAppGlideModule才能实现链式调用所有API，Glide4.9.0取消了这一限制。</p>
+<p>1.2.步骤<br>新建MyAppGlideModule继承自AppGlideModule，并添加@GlideModule注解：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@GlideModule</span><br><span class="line">class MyAppGlideModule : AppGlideModule()</span><br></pre></td></tr></table></figure></p>
+<p>AppGlideModule有两个常用的重载方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@GlideModule</span><br><span class="line">class MyAppGlideModule : AppGlideModule() &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 全局配置Glide选项</span><br><span class="line">     */</span><br><span class="line">    override fun applyOptions(context: Context, builder: GlideBuilder) &#123;</span><br><span class="line">        super.applyOptions(context, builder)</span><br><span class="line">        // 例如：全局设置图片格式为RGB_565</span><br><span class="line">        builder.setDefaultRequestOptions(RequestOptions().format(DecodeFormat.PREFER_RGB_565))</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 注册自定义组件</span><br><span class="line">     */</span><br><span class="line">    override fun registerComponents(context: Context, glide: Glide, registry: Registry) &#123;</span><br><span class="line">        super.registerComponents(context, glide, registry)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.GlideExtension<br>官方提供了@GlideExtension的注解，使用的是静态方法实现拓展Glide的API。但是Kotlin本身提供了扩展方法，所以我们使用Kotlin的扩展即可，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fun RequestOptions.miniThumb(size: Int): RequestOptions &#123;</span><br><span class="line">    return this.fitCenter()</span><br><span class="line">            .override(100)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>设置好之后，就可以直接链式调用此扩展方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">   .load(url)</span><br><span class="line">   .miniThumb()</span><br><span class="line">   .into(imageView);</span><br></pre></td></tr></table></figure></p>
+<h3 id="四、占位符"><a href="#四、占位符" class="headerlink" title="四、占位符"></a>四、占位符</h3><p>1.占位符(Placeholder)<br>表示加载过程中显示的图片<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">  .load(url)</span><br><span class="line">  .placeholder(R.drawable.placeholder)</span><br><span class="line">  .into(imageView)</span><br><span class="line">// 或者:</span><br><span class="line">Glide.with(context)</span><br><span class="line">  .load(url)</span><br><span class="line">  .placeholder(new ColorDrawable(Color.BLACK))</span><br><span class="line">  .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>2.错误符(Error)<br>表示加载错误显示的图片，使用方式与Placeholder类似<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">  .load(url)</span><br><span class="line">  .error(R.drawable.error)</span><br><span class="line">  .into(imageView)</span><br><span class="line">// 或者:</span><br><span class="line">Glide.with(context)</span><br><span class="line">  .load(url)</span><br><span class="line">  .error(new ColorDrawable(Color.RED))</span><br><span class="line">  .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>3.后备回调符(Fallback)<br>当需要加载的url或者文件为空时展示的图，如果不设置Fallback，内容为空时默认展示错误符。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">  .load(url)</span><br><span class="line">  .fallback(R.drawable.fallback)</span><br><span class="line">  .into(imageView)</span><br><span class="line">//或者:</span><br><span class="line">Glide.with(context)</span><br><span class="line">  .load(url)</span><br><span class="line">  .fallback(new ColorDrawable(Color.GREY))</span><br><span class="line">  .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>五、选项<br>1.RequestOptions<br>Glide中的大部分设置项都可以通过 RequestOptions 类和 apply() 方法来应用到程序中。<br>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">val options = RequestOptions().centerCrop()</span><br><span class="line">        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)</span><br><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        .apply(options)</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>apply() 方法可以被调用多次，因此 RequestOption 可以被组合使用。如果 RequestOptions 对象之间存在相互冲突的设置，那么只有最后一个被应用的 RequestOptions 会生效。</p>
+<p>2.Generated API<br>所有的RequestOptions都方法可以直接链式调用，如上述的RequestOptions代码也可以写成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        .centerCrop()</span><br><span class="line">        .diskCacheStrategy(DiskCacheStrategy.RESOURCE)</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>3.过渡选项<br>TransitionOptions 用于决定你的加载完成时会发生什么，例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        .transition(DrawableTransitionOptions.withCrossFade())</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>4.缩略图 (Thumbnail) 请求<br>Glide 的 thumbnail() API 允许你指定一个 RequestBuilder 以与你的主请求并行启动。thumbnail() 会在主请求加载过程中展示。如果主请求在缩略图请求之前完成，则缩略图请求中的图像将不会被展示。thumbnail() API 对本地和远程图片都适用，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        .thumbnail(Glide.with(context</span><br><span class="line">                .load(thumbnailUrl))</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>5.在失败时开始新的请求<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        .error(Glide.with(context</span><br><span class="line">                .load(errorUrl))</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>六.变换<br>github上有一个比较好用的Glide Transformations库：<br><code>https://github.com/wasabeef/glide-transformations</code></p>
+<p>具体效果可以在这个库里看到，我们学习一下怎么使用：</p>
+<p>1.导入Glide Transformations库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// Glide图片变换库</span><br><span class="line">implementation &apos;jp.wasabeef:glide-transformations:4.0.1&apos;</span><br></pre></td></tr></table></figure></p>
+<p>2.使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        // 模糊效果</span><br><span class="line">        .transform(BlurTransformation(15))</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>3.多重变换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        // 圆角效果+模糊效果</span><br><span class="line">        .transform(MultiTransformation(RoundedCornersTransformation(15, 5), BlurTransformation(15)))</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>七、尺寸<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        // 固定宽高</span><br><span class="line">        .override(100,100)</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>八、缓存<br>默认的策略叫做 AUTOMATIC ，当你加载远程数据时，AUTOMATIC 策略仅会存储原始数据。对于本地数据，AUTOMATIC 策略则会仅存储变换过的缩略图。</p>
+<p>1.一共有五种缓存策略<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DiskCacheStrategy.NONE： 不缓存任何内容</span><br><span class="line">DiskCacheStrategy.RESOURCE： 缓存解码后的图片</span><br><span class="line">DiskCacheStrategy.DATA： 缓存未经解码的数据</span><br><span class="line">DiskCacheStrategy.AUTOMATIC：默认选项</span><br><span class="line">DiskCacheStrategy.ALL ： 对于远程图片，缓存RESOURCE+DATA；对于本地图片，缓存RESOURCE</span><br></pre></td></tr></table></figure></p>
+<p>2.指定缓存策略<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        .diskCacheStrategy(DiskCacheStrategy.ALL)</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+<p>九、监听器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Glide.with(context)</span><br><span class="line">        .load(url)</span><br><span class="line">        .listener(object : RequestListener&lt;Drawable&gt; &#123;</span><br><span class="line">            /**</span><br><span class="line">             * 加载失败</span><br><span class="line">             * @return false 未消费，继续走into(ImageView)</span><br><span class="line">             *         true 已消费，不再继续走into(ImageView)</span><br><span class="line">             */</span><br><span class="line">            override fun onLoadFailed(e: GlideException?, model: Any?, target: Target&lt;Drawable&gt;?, isFirstResource: Boolean): Boolean &#123;</span><br><span class="line">                return false</span><br><span class="line">            &#125;</span><br><span class="line">            /**</span><br><span class="line">             * 加载成功</span><br><span class="line">             * @return false 未消费，继续走into(ImageView)</span><br><span class="line">             *         true 已消费，不再继续走into(ImageView)</span><br><span class="line">             */</span><br><span class="line">            override fun onResourceReady(resource: Drawable?, model: Any?, target: Target&lt;Drawable&gt;?, dataSource: DataSource?, isFirstResource: Boolean): Boolean &#123;</span><br><span class="line">                return false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        .into(imageView)</span><br></pre></td></tr></table></figure></p>
+
+      
+      
+
+  <div class="declare">
+    <strong>本文作者：</strong>
+    
+      KYLE
+    
+    <br>
+    <strong>本文链接：</strong>
+    https://kylechandev.github.io/2019/04/27/glide/
+    <br>
+    <strong>版权声明：</strong>
+    本作品采用
+    <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+    进行许可。转载请注明出处！
+    
+      <br>
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+    
+  </div>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -204,301 +282,92 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/26/DI/" class="archive-article-date">
-  	<time datetime="2019-04-26T00:56:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/04/26/DI/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浅谈控制反转与依赖注入</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/26/DI/">浅谈控制反转与依赖注入</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、简介"><span class="toc-number">1.</span> <span class="toc-text">一、简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、下载和设置"><span class="toc-number">2.</span> <span class="toc-text">二、下载和设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、Generated-API"><span class="toc-number">3.</span> <span class="toc-text">三、Generated API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、占位符"><span class="toc-number">4.</span> <span class="toc-text">四、占位符</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/31/diary-19-3-31/" class="archive-article-date">
-  	<time datetime="2019-03-31T05:57:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-31</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/31/diary-19-3-31/">diary/19/3/31</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随心</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/29/proguard/" class="archive-article-date">
-  	<time datetime="2019-03-29T11:35:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/29/proguard/">Android Studio 混淆文件存根</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/24/introduce/" class="archive-article-date">
-  	<time datetime="2019-03-24T12:18:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/24/introduce/">我的个人博客  -- 凯</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/23/BlogSetUp/" class="archive-article-date">
-  	<time datetime="2019-03-23T11:32:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/23/BlogSetUp/">史上最全搭建免费个人博客网站教程(使用Github)，从搭建到主题安装到发布第一篇文章到主题配置一站式讲解</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Yilia</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/23/CalendarProviderManager/" class="archive-article-date">
-  	<time datetime="2019-03-23T03:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/23/CalendarProviderManager/">Android日历事件管理器，是时候为你的APP增加一个事件提醒功能啦！</a>
-    </h1>
-  
+  <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80MzM4My8xOTkyNA==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Android</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">系统表</a>
-        		</li>
-      		
-		</ul>
-	</div>
+       if (typeof LivereTower === 'function') { return; }
 
-          
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/22/A-NewStart/" class="archive-article-date">
-  	<time datetime="2019-03-22T03:27:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/22/A-NewStart/">一个新的开始 - Hello Bio !</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -542,8 +411,8 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
